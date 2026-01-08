@@ -115,7 +115,7 @@ local function showLoading()
     task.wait(1.2)
 
     local success, err = pcall(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/HopefulASFS/HopefulFS-Scripts/refs/heads/main/main.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HopefulASFS/HopefulFS-Scripts/refs/heads/main/loader.lua"))()
 end)
 
 if not success then
@@ -138,6 +138,7 @@ btn.MouseButton1Click:Connect(function()
         status.Text = "Invalid key!"
     end
 end)
+
 
 
 
