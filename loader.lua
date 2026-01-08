@@ -117,7 +117,7 @@ local function showLoading()
     gui:Destroy()
 
     -- 🔴 PUT YOUR MAIN SCRIPT RAW LINK HERE
-    loadstring(game:HttpGet("MAIN_SCRIPT_RAW_URL_HERE"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HopefulASFS/HopefulFS-Scripts/refs/heads/main/main.lua"))()
 end
 
 btn.MouseButton1Click:Connect(function()
@@ -132,3 +132,4 @@ btn.MouseButton1Click:Connect(function()
         status.Text = "Invalid key!"
     end
 end)
+
