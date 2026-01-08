@@ -12,20 +12,20 @@ pcall(function()
 end)
 
 -- ===== GUI ROOT =====
-local gui = Instance.new("ScreenGui")
+local gui = Instance.new("ScreenGui") gui.IgnoreGuiInset = true
 gui.Name = "HopefulFS_Loader"
 gui.ResetOnSpawn = false
 gui.Parent = CoreGui
 
 -- ===== BACKGROUND =====
-local bg = Instance.new("Frame", gui)
-bg.Size = UDim2.fromScale(1,1)
+local bg = Instance.new("Frame")
+bg.Parent = gui
+bg.Size = UDim2.new(1, 0, 1, 0)
+bg.Position = UDim2.new(0, 0, 0, 0)
 bg.BackgroundColor3 = Color3.fromRGB(10,10,10)
-bg.BackgroundTransparency = 1
+bg.BorderSizePixel = 0
+bg.BackgroundTransparency = 0
 
-TweenService:Create(bg, TweenInfo.new(0.4), {
-    BackgroundTransparency = 0
-}):Play()
 
 -- ===== CARD =====
 local card = Instance.new("Frame", bg)
@@ -138,5 +138,6 @@ btn.MouseButton1Click:Connect(function()
         status.Text = "Invalid key!"
     end
 end)
+
 
 
