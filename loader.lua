@@ -114,10 +114,16 @@ local function showLoading()
 
     task.wait(1.2)
 
-    gui:Destroy()
-
-    -- 🔴 PUT YOUR MAIN SCRIPT RAW LINK HERE
+    local success, err = pcall(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/HopefulASFS/HopefulFS-Scripts/refs/heads/main/main.lua"))()
+end)
+
+if not success then
+    warn("MAIN SCRIPT FAILED:", err)
+end
+
+gui:Destroy()
+
 end
 
 btn.MouseButton1Click:Connect(function()
@@ -132,4 +138,5 @@ btn.MouseButton1Click:Connect(function()
         status.Text = "Invalid key!"
     end
 end)
+
 
